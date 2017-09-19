@@ -1,0 +1,25 @@
+.gm-add {
+	margin: 5px 0;
+}
+.gm-list {
+	overflow: hidden;
+	margin: 0;
+}
+.gm-list li {
+	float: left;
+	width: 150px;
+	text-align: center;
+	margin: 10px 10px 10px 0;
+	cursor: move;
+}
+.gm-list li img {
+	margin-bottom: 3px;
+}
+.gm-list li .gm-change-image {
+	margin-right: 10px;
+}
+.gm-list li .gm-remove-image {
+	color: #a00;
+	line-height: 24px;
+	vertical-align: middle;
+}
