@@ -45,14 +45,22 @@ function bs_default($value, $default, $echo=false) {
 	echo $value;
 }
 
-function bs_locate_page($slug, $title) {
+function bs_locate_page($slug, $title, $create=null) {
 	$page_id = get_option("bs_pageid_".$slug);
 
 	if($page_id) {
 		$page = get_post((int) $page_id);
 	}
 
-	if (!$page_id || !$page) {
+	if ($create !== true && !$page) {
+		$page = get_page_by_path($slug);
+
+		if($page) {
+			update_option("bs_pageid_".$slug, $page->ID);
+		}
+	}
+
+	if ($create !== false && !$page) {
 		$page_id = wp_insert_post([
 			"post_type"   => "page",
 			"post_name"   => $slug,
