@@ -40,6 +40,8 @@ jQuery(function($) {
 
 				$('.gm-list', $box).append('<li><input type="hidden" name="' + $box.data("meta-key") + '[' + index + ']" value="' + attachment.id + '"><img class="gm-image-preview" src="' + src + '"><a class="gm-change-image button button-small" href="#" data-uploader-title="Změnit obrázek" data-uploader-button-text="Změnit obrázek">Změnit</a><small><a class="gm-remove-image" href="#">Odstranit</a></small></li>');
 			});
+
+			resetIndex();
 		});
 
 		makeSortable();
@@ -79,7 +81,7 @@ jQuery(function($) {
 
 	function resetIndex() {
 		$('.gm-list li').each(function(i) {
-			var meta_key = $(this).closest("gallery-metabox").data("meta-key");
+			var meta_key = $(this).closest(".gallery-metabox").data("meta-key");
 			$(this).find('input:hidden').attr('name', meta_key + '[' + i + ']');
 		});
 	}
