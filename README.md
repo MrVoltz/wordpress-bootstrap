@@ -6,7 +6,7 @@ I tried to make it really simple to use. To enable some "feature", include the b
 
 ## Features
 
-### Header Menu (header-menu) (DEPRECATED)
+### Menus (menus)
 
 Add theme support for menus and create main header menu.
 

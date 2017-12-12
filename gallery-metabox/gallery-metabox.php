@@ -67,8 +67,8 @@ function bs_gallery_metabox_get_config($box) {
 }
 
 function bs_gallery_metabox_enqueue($post, $box) {
-	wp_enqueue_script("gallery-metabox", get_theme_url("gallery-metabox/js/gallery-metabox.js"), [ "jquery", "jquery-ui-sortable" ]);
-	wp_enqueue_style("gallery-metabox", get_theme_url("/gallery-metabox/css/gallery-metabox.css"));
+	wp_enqueue_script("gallery-metabox", bs_url("gallery-metabox/js/gallery-metabox.js"), [ "jquery", "jquery-ui-sortable" ]);
+	wp_enqueue_style("gallery-metabox", bs_url("/gallery-metabox/css/gallery-metabox.css"));
 }
 
 function bs_gallery_metabox_display($post, $box) {
