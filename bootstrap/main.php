@@ -140,5 +140,5 @@ function bs_enqueue_admin_assets()
         wp_enqueue_script("bootstrap-admin-css", bs_url("bootstrap/admin.css"), [], false);
         wp_enqueue_script("bootstrap-admin-js", bs_url("bootstrap/admin.js"), ["jquery"], false, true);
     }
-    add_action("admin_enqueue_scripts");
+    add_action("admin_enqueue_scripts", "bs_admin_assets_enqueue");
 }
